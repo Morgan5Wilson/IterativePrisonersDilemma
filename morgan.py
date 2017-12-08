@@ -6,19 +6,23 @@
     #     move: A function that returns 'c' or 'b'  #
     #################################               #
                                     #               ###########
-team_name = 'Morgan5Wilson'         # Only 10 chars displayed.#
+team_name = 'M5W'                   # Only 10 chars displayed #
 strategy_name = 'Playing it safe.'  ###########################
-strategy_description = 'As long as my score is higher I will always collude.'
+strategy_description = 'If all else fails pick for me.'
 
 
 def move(my_history, their_history, my_score, their_score): 
+    if my_history.count('b') > their_history.count('b'):
+        return 'c'
+    if their_history.count('c') == my_history.count('b'):
+        return  rekt()
+    else:
+        rekt()
+
+def rekt():
     import random
     list = ('b', 'c')
-    if my_score > their_score:
-        return 'b'
-    else:
-        random.choice(list)
-
+    return random.choice(list)
 
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
@@ -43,7 +47,7 @@ if __name__ == '__main__':
               their_history='', 
               my_score=0,
               their_score=0,
-              result='b'):
+              result= 'c'):
          print 'Test passed'
      # Test 2: Continue betraying if they collude despite being betrayed.
     test_move(my_history= 'bbb',
@@ -61,4 +65,4 @@ if __name__ == '__main__':
               
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='c')          
