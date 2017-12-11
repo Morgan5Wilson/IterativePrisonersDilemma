@@ -14,24 +14,25 @@ strategy_description = 'If all else fails pick for me.'
 def move(my_history, their_history, my_score, their_score):
     if my_history.count('b') > their_history.count('b'):    # if they betrayed more times then I betrayed them then I collude 
         return 'c'
-    if 
-    if their_history[-1] = my_history
-        return group_huddle()
+    if their_history[-1] = my_history[-2]
+        return tat_for_tit()
     else:
         return rekt()
-
 
 def rekt():
     import random
     list = ('b', 'c')
     return random.choice(list)
     
-def group_huddle():
+def tat_for_tit():
     move = their_history[-1]
     return move
     if their_history[0] = 'c'
         return  rekt()
 
+def tat_rof_tit():
+    return tat_for_tit()
+    
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
@@ -50,7 +51,7 @@ def test_move(my_history, their_history, my_score, their_score, result):
 
 if __name__ == '__main__':
      
-    # Test 1: Betray on first move.
+    # Test 1: Betray on first ''move.
     if test_move(my_history='',
               their_history='', 
               my_score=0,
