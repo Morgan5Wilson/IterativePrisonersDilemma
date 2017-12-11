@@ -11,13 +11,12 @@ strategy_name = 'Playing it safe.'  ###########################
 strategy_description = 'If all else fails pick for me.'
 
 
-def move(my_history, their_history, my_score, their_score): 
-    for str(b) in their_history
-    if my_history.count('b') > their_history.count('b'):
+def move(my_history, their_history, my_score, their_score):
+    if my_history.count('b') > their_history.count('b'):    # if they betrayed more times then I betrayed them then I collude 
         return 'c'
-    if their_history.count('c') == my_history.count('b'):
-        return their_history[-1]
-    
+    if 
+    if their_history[-1] = my_history
+        return group_huddle()
     else:
         return rekt()
 
@@ -28,7 +27,10 @@ def rekt():
     return random.choice(list)
     
 def group_huddle():
-    
+    move = their_history[-1]
+    return move
+    if their_history[0] = 'c'
+        return  rekt()
 
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
