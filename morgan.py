@@ -12,12 +12,13 @@ strategy_description = 'If all else fails pick for me.'
 
 
 def move(my_history, their_history, my_score, their_score): 
+    for str(b) in their_history
     if my_history.count('b') > their_history.count('b'):
         return 'c'
     if their_history.count('c') == my_history.count('b'):
-        return  rekt()
+        return their_history[-1]
+    
     else:
-
         return rekt()
 
 
@@ -25,6 +26,9 @@ def rekt():
     import random
     list = ('b', 'c')
     return random.choice(list)
+    
+def group_huddle():
+    
 
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
@@ -60,6 +64,6 @@ if __name__ == '__main__':
               # the simulation (if working correctly) would have awarded 
               # 300 to me and -750 to them. This test will pass if and only if
               # move('bbb', 'ccc', 0, 0) returns 'b'.
-              my_score=0, 
+              my_score=0,
               their_score=0,
-              result='c')          
+              result='c')
